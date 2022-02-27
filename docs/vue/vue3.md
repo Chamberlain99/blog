@@ -112,7 +112,7 @@ Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进
     <title>Vue 测试实例</title>
 
     <script src="https://unpkg.com/vue@next"></script>
-<head>
+</head>
 
 <body>
 <div id="hello-vue" class="demo-st">
@@ -182,7 +182,7 @@ v-html: 转义输出变量的html变量标签
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Vue 测试实例<title>
+    <title>Vue 测试实例</title>
     <script src="https://unpkg.com/vue@next"></script>
 </head>
 
@@ -292,7 +292,7 @@ v-for可以直接在模板中循环打印数组和对象, vue要求循环时在�
 <head>
   <title>Vue App</title>
   <script src="https://unpkg.com/vue@next"></script>
-<head>
+</head>
 
 <body>
   <div id="app">
@@ -352,7 +352,7 @@ v-for可以直接在模板中循环打印数组和对象, vue要求循环时在�
 <head>
   <title>Vue App</title>
   <script src="https://unpkg.com/vue@next"></script>
-<head>
+</head>
 
 <body>
   <div id="app">
@@ -421,7 +421,7 @@ v-model：双向绑定的最基本用法
     <zidingyi></zidingyi>
 
     <button-counter></button-counter>
-<div>
+</div>
 
 <script>
 

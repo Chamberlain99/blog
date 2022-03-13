@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "vuepress dev docs",
+    "docs:dev": "vuepress dev docs --temp .temp",
     "docs:build": "vuepress build docs"
   },
   "author": "",
@@ -13,5 +13,8 @@
   "devDependencies": {
     "vuepress": "^1.9.7",
     "vuepress-theme-reco": "^1.6.11"
+  },
+  "dependencies": {
+    "markdown-it-disable-url-encode": "^1.0.1"
   }
 }

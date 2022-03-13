@@ -17,14 +17,6 @@ module.exports = {
 
         ],
         sidebar: {
-            // {
-            //     title: '欢迎学习',
-            //     path: '/',
-            //     collapsable: false, // 不折叠
-            //     children: [
-            //         { title: "学前必读", path: "/" }
-            //     ]
-            // },
             '/vue/':[
               {
                 title: "Vue框架",
@@ -36,7 +28,27 @@ module.exports = {
                   { title: "vue3全家桶", path: "/vue/02-vue3全家桶.md" },
                 ],
               },
-            ]
+              // {
+              //   title: "Vue源码",
+              //   path: '/vue2Source',
+              //   collapsable: true, // 不折叠
+              //   children: [
+              //     { 
+              //       title: "vue2源码解析", path: "/vue/vue2Source/01-vue2源码解析.md" },
+              //   ],                
+              // }
+            ],
+            // '/vueSource/':[
+            //   {
+            //     title: "Vue源码系列",
+            //     path: '/',
+            //     collapsable: true, // 不折叠
+            //     children: [
+            //       { title: "vue2源码解析", path: "/vueSource/vue2源码解析.md" },
+  
+            //     ],
+            //   },
+            // ]
       
           }
     },

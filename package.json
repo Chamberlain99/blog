@@ -12,7 +12,9 @@
   "license": "ISC",
   "devDependencies": {
     "vuepress": "^1.9.7",
-    "vuepress-theme-reco": "^1.6.11"
+    "vuepress-theme-reco": "^1.6.11",
+    "@vuepress/plugin-back-to-top": "^1.5.4",
+    "@vuepress/plugin-medium-zoom": "^1.5.4"
   },
   "dependencies": {
     "markdown-it-disable-url-encode": "^1.0.1"

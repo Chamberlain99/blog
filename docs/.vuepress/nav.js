@@ -11,19 +11,21 @@
      }
 
    const more =  { 
-        text: '张伯伦 JavaScript 博客', 
+        text: 'Github & 掘金', 
         items: [
             { text: 'Github', link: 'https://github.com/chamberlain99' },
             { text: '掘金', link: 'https://juejin.cn/user/1855631360537159/posts' }
         ]
     }
 
-    const node = { text: 'node', link: '/node/nodeBase.md' }
+    // const node = { text: 'node', link: '/node/nodeBase.md' }
+    const contact = { text:'关于我',link:'/contact/' }
 
 
 module.exports = [
     // home,
     post,
     more,
-    node
+    // node,
+    contact
 ]

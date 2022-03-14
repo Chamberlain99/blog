@@ -80,7 +80,10 @@
         collapsable: true,
         children: [
             'node/node',
-            'node/pm2'
+            'node/pm2',
+            'node/node_baseKnowledge',
+            'node/node_Advanced'
+
         ]
     },
     {

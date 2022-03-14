@@ -1,7 +1,12 @@
 
   const note = [
+    {   
+        title:'写在前面',
+        collapsable: true,
+        path:'/'
+    },
     {  
-        title: '源码解析',
+        title: 'vue3学习总结',
         collapsable: true,
         children: [
             'sourceCode/vue3',
@@ -21,19 +26,6 @@
             'optimization/性能优化总结',
             'optimization/SOLID',
             'optimization/performance指标解释',
-        ]
-    },
-    {  
-        title: '源码解析',
-        collapsable: true,
-        children: [
-            'sourceCode/vue2',
-            'sourceCode/vue3',
-            'sourceCode/react',
-            'sourceCode/reactHooks',
-            'sourceCode/redux',
-            'sourceCode/applets',
-            'sourceCode/koa',
         ]
     },
     {

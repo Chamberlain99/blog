@@ -2,7 +2,7 @@
 home: true
 heroImage: /home.png
 actionText: 开始阅读 →
-actionLink: /vue/
+actionLink: /note/
 features:
 - title: day day up
   details: 记录每一天的进步, 一分耕耘，一分收获.

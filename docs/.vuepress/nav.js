@@ -1,9 +1,9 @@
 
-   const note =  { text: '首页', link: '/' }
+   const home =  { text: '首页', link: '/' }
 
-   const algorithm =  { 
+   const post =  { 
        text: '博客文章', 
-       link: 'note'
+       link: '/note/'
       //  items:[
       //    {text:'vue3学习篇',link:'/vue/'},
       //    {text:'vue2源码解读',link:'/vuesource/'}
@@ -18,12 +18,12 @@
         ]
     }
 
-    const node = { text: 'node', link: '/node/node基础知识.md' }
+    const node = { text: 'node', link: '/node/nodeBase.md' }
 
 
 module.exports = [
-    note,
-    algorithm,
+    // home,
+    post,
     more,
     node
 ]

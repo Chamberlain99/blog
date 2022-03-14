@@ -29,39 +29,27 @@
         title: '源码解析',
         collapsable: true,
         children: [
-            'sourceCode/vue3基础1',
-            'sourceCode/vue3基础2',
-            'sourceCode/vue3全家桶',
-            'sourceCode/react',
-            'sourceCode/reactHooks',
-            'sourceCode/redux',
-            'sourceCode/applets',
-            'sourceCode/koa',
-        ]
-    },
-    
-    {  
-        title: '源码解析',
-        collapsable: true,
-        children: [
-            'sourceCode/vue2',
             'sourceCode/vue3',
-            'sourceCode/react',
-            'sourceCode/reactHooks',
-            'sourceCode/redux',
-            'sourceCode/applets',
-            'sourceCode/koa',
+            'sourceCode/vueAll',
+            'sourceCode/vueBase'
+            // ['sourceCode/vue3','vue3基础1']
+            // ['sourceCode/vueAll','vue3基础2'],
+            // ['sourceCode/vueBase','vue3全家桶']
+            // 'sourceCode/vue3基础2.md',
+            // 'sourceCode/vue3全家桶.md',
+            // 'sourceCode/react',
+            // 'sourceCode/reactHooks',
+            // 'sourceCode/redux',
+            // 'sourceCode/applets',
+            // 'sourceCode/koa',
         ]
     },
-
-
-
   ]
   
 
 
   module.exports = {
-    '/note/':note
+    '/note/':note,
 
     // '/vue/': vuePost,
     // '/vuesource/': vuesource,

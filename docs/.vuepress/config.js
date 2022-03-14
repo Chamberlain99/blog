@@ -13,7 +13,7 @@ module.exports = {
     //   './nav.js',
     //   './sidebar.js'
     // ],
-    /* 测试 */
+    /* 测试 文件 */
     themeConfig: {
         nav,
         sidebar,

@@ -1,3 +1,13 @@
+---
+title: 手写一个instanceOf原理
+date: 2022-03-14 21:22:07
+permalink: /pages/a40dc5/
+categories:
+  - note
+  - jsNote
+tags:
+  - 
+---
 # 手写一个instanceOf原理
 
 ```javascript

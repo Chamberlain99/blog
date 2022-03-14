@@ -1,3 +1,13 @@
+---
+title: jenkins
+date: 2022-03-14 21:22:07
+permalink: /pages/59fde6/
+categories:
+  - note
+  - automation
+tags:
+  - 
+---
 # Jenkins
 
 [Jenkins官网：https://www.jenkins.io/](https://www.jenkins.io/)

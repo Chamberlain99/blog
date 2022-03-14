@@ -1,3 +1,13 @@
+---
+title: binaryTree
+date: 2022-03-14 21:22:07
+permalink: /pages/9d1374/
+categories:
+  - note
+  - algorithm
+tags:
+  - 
+---
 # 二叉树
 
 ```js

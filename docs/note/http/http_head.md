@@ -1,3 +1,13 @@
+---
+title: http_head
+date: 2022-03-14 21:22:07
+permalink: /pages/5f7383/
+categories:
+  - note
+  - http
+tags:
+  - 
+---
 # 常用的HTTP请求头与响应头
 
 ## HTTP消息头

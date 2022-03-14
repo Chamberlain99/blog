@@ -1,3 +1,13 @@
+---
+title: ci_cd
+date: 2022-03-14 21:22:07
+permalink: /pages/aa3dee/
+categories:
+  - note
+  - engineering
+tags:
+  - 
+---
 # 前端工程化 CI/CD 初探
 
 ## 思维导图

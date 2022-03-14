@@ -1,3 +1,13 @@
+---
+title: 实现Symbol类型
+date: 2022-03-14 21:22:07
+permalink: /pages/6ae7b1/
+categories:
+  - note
+  - jsNote
+tags:
+  - 
+---
 # 实现Symbol类型
 
 ## 前言

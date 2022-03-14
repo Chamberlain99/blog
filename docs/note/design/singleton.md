@@ -1,3 +1,13 @@
+---
+title: singleton
+date: 2022-03-14 21:22:07
+permalink: /pages/8277be/
+categories:
+  - note
+  - design
+tags:
+  - 
+---
 # 单例模式
 
 ## 定义

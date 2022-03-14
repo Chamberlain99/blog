@@ -1,3 +1,13 @@
+---
+title: insert
+date: 2022-03-14 21:22:07
+permalink: /pages/940dc5/
+categories:
+  - note
+  - algorithm
+tags:
+  - 
+---
 # 插入排序
 
 ```js

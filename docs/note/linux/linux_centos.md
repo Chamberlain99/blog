@@ -1,3 +1,13 @@
+---
+title: linux_centos
+date: 2022-03-14 21:22:07
+permalink: /pages/d0af44/
+categories:
+  - note
+  - linux
+tags:
+  - 
+---
 # CentOS 7
 
 常用于服务端的 linux 发行版，基于其稳定的性能

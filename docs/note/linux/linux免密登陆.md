@@ -1,3 +1,13 @@
+---
+title: linux免密登陆
+date: 2022-03-14 21:22:07
+permalink: /pages/b15819/
+categories:
+  - note
+  - linux
+tags:
+  - 
+---
 #  Linux免密远程登录
 
 ## 免密登陆的原理

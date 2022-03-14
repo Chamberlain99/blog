@@ -1,3 +1,13 @@
+---
+title: cli
+date: 2022-03-14 21:22:07
+permalink: /pages/e8103f/
+categories:
+  - note
+  - automation
+tags:
+  - 
+---
 # 如何创建一个自己的cli
 
 ## 前置

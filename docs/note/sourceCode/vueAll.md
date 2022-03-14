@@ -1,3 +1,13 @@
+---
+title: vueAll
+date: 2022-03-14 21:22:07
+permalink: /pages/13698b/
+categories:
+  - note
+  - sourceCode
+tags:
+  - 
+---
 # vue-router4
 
 > vue升级vue3之后，配套的vue-router也升级为vue-router@4.x版本  

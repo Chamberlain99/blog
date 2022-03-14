@@ -1,3 +1,13 @@
+---
+title: random
+date: 2022-03-14 21:22:07
+permalink: /pages/e63df3/
+categories:
+  - note
+  - jsNote
+tags:
+  - 
+---
 # 乱序你真的会了吗？
 
 关于乱序（数组的重新排序）你知道几种方式呢？

@@ -1,3 +1,13 @@
+---
+title: quick
+date: 2022-03-14 21:22:07
+permalink: /pages/34ccc3/
+categories:
+  - note
+  - algorithm
+tags:
+  - 
+---
 # 快速排序
 
 ```js

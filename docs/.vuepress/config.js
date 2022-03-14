@@ -5,7 +5,7 @@ const sidebar = require('./sidebar.js')
 module.exports = {
     title: '程序员成长-修炼中心 「作者：陈楚城」',
     description: '个人博客-学习总结',
-    theme:'reco',
+    theme:'vdoing',
     head:[
       ['link', { rel: 'icon', href: '/favicon.ico' }], // 增加一个自定义的 favicon(网页标签的图标) 
     ],

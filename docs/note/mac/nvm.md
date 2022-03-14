@@ -1,3 +1,13 @@
+---
+title: nvm
+date: 2022-03-14 21:22:07
+permalink: /pages/43af94/
+categories:
+  - note
+  - mac
+tags:
+  - 
+---
 # nvm 安装以及使用
 
 nvm 是你方便的 node 包管理工具

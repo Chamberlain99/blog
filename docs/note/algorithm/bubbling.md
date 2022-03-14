@@ -1,3 +1,13 @@
+---
+title: bubbling
+date: 2022-03-14 21:22:07
+permalink: /pages/4f1f9f/
+categories:
+  - note
+  - algorithm
+tags:
+  - 
+---
 # 冒泡排序
 
 ```js

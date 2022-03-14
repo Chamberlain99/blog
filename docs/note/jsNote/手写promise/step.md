@@ -1,3 +1,14 @@
+---
+title: step
+date: 2022-03-14 21:22:07
+permalink: /pages/1e23c3/
+categories:
+  - note
+  - jsNote
+  - 手写promise
+tags:
+  - 
+---
 # 手写 Promise
 
 ## Promise 自身的状态

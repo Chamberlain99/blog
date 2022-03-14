@@ -1,3 +1,13 @@
+---
+title: advance
+date: 2022-03-14 21:22:07
+permalink: /pages/2348ec/
+categories:
+  - note
+  - algorithm
+tags:
+  - 
+---
 # 动态规划
 
 ```js

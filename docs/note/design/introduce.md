@@ -1,3 +1,13 @@
+---
+title: introduce
+date: 2022-03-14 21:22:07
+permalink: /pages/ff7737/
+categories:
+  - note
+  - design
+tags:
+  - 
+---
 # 设计模式简介
 
 [维基百科介绍](https://zh.wikipedia.org/wiki/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F_(%E8%AE%A1%E7%AE%97%E6%9C%BA))

@@ -1,3 +1,13 @@
+---
+title: select
+date: 2022-03-14 21:22:07
+permalink: /pages/acd017/
+categories:
+  - note
+  - algorithm
+tags:
+  - 
+---
 # 选择排序
 
 ```js

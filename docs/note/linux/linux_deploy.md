@@ -1,3 +1,13 @@
+---
+title: linux_deploy
+date: 2022-03-14 21:22:07
+permalink: /pages/f337bc/
+categories:
+  - note
+  - linux
+tags:
+  - 
+---
 # Linux 部署/配置
 
 ## 免密登录

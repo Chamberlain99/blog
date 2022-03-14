@@ -1,3 +1,13 @@
+---
+title: LRU缓存算法
+date: 2022-03-14 21:22:07
+permalink: /pages/1a6d58/
+categories:
+  - note
+  - jsNote
+tags:
+  - 
+---
 # LRU缓存算法
 
 ```js

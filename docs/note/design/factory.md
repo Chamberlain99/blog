@@ -1,3 +1,13 @@
+---
+title: factory
+date: 2022-03-14 21:22:07
+permalink: /pages/7e7bfb/
+categories:
+  - note
+  - design
+tags:
+  - 
+---
 # 工厂模式
 
 

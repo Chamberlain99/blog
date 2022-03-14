@@ -1,3 +1,13 @@
+---
+title: thread
+date: 2022-03-14 21:22:07
+permalink: /pages/76f14e/
+categories:
+  - note
+  - os
+tags:
+  - 
+---
 # 进程、线程 <Badge type="tip" text="了解即可"/>
 
 操作系统

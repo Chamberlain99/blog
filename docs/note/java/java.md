@@ -1,3 +1,13 @@
+---
+title: java
+date: 2022-03-14 21:22:07
+permalink: /pages/949df1/
+categories:
+  - note
+  - java
+tags:
+  - 
+---
 # Java 初探
 
 概述

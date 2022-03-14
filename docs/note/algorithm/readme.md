@@ -1,3 +1,13 @@
+---
+title: readme
+date: 2022-03-14 21:22:07
+permalink: /pages/fcfbab/
+categories:
+  - note
+  - algorithm
+tags:
+  - 
+---
 #  解决算法面试问题
 
 - 面试的时候，在遇见算法题目的时候，应该揣摩面试官的意图，听好关键词，比如:有序的数列 做查找、要求算法复杂度是O(logN)这类一般就是用二分的思想。

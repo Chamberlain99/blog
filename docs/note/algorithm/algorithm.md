@@ -1,3 +1,13 @@
+---
+title: algorithm
+date: 2022-03-14 21:22:07
+permalink: /pages/881719/
+categories:
+  - note
+  - algorithm
+tags:
+  - 
+---
 # 算法
 
 ## 什么是算法

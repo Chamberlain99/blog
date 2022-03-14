@@ -1,3 +1,13 @@
+---
+title: BasicCommand
+date: 2022-03-14 21:22:07
+permalink: /pages/1a0c53/
+categories:
+  - note
+  - linux
+tags:
+  - 
+---
 # 基本命令
 
 [linux教程](https://www.runoob.com/linux/linux-tutorial.html)

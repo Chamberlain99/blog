@@ -1,3 +1,13 @@
+---
+title: http_1
+date: 2022-03-14 21:22:07
+permalink: /pages/ed4caf/
+categories:
+  - note
+  - http
+tags:
+  - 
+---
 # HTTP 1.x
 
 ## HTTP 请求模型

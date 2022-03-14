@@ -1,3 +1,13 @@
+---
+title: SOLID
+date: 2022-03-14 21:22:07
+permalink: /pages/1a9b3b/
+categories:
+  - note
+  - optimization
+tags:
+  - 
+---
 # 面向切面的编程思想
 
 ![3A5A986B-CC9B-4037-A9A1-853987BE1E26](/automation/3A5A986B-CC9B-4037-A9A1-853987BE1E26.jpg)

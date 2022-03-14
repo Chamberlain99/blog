@@ -1,3 +1,13 @@
+---
+title: bind
+date: 2022-03-14 21:22:07
+permalink: /pages/cd3436/
+categories:
+  - note
+  - jsNote
+tags:
+  - 
+---
 # 手写一个Function.bind
 
 ## 概念

@@ -1,3 +1,13 @@
+---
+title: 手写一个map和reduce
+date: 2022-03-14 21:22:07
+permalink: /pages/e88f4b/
+categories:
+  - note
+  - jsNote
+tags:
+  - 
+---
 # 手写一个map和reduce
 
 > arr.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue])

@@ -1,3 +1,13 @@
+---
+title: 手写一个new操作符
+date: 2022-03-14 21:22:07
+permalink: /pages/0828a5/
+categories:
+  - note
+  - jsNote
+tags:
+  - 
+---
 # 手写一个new操作符
 ```javascript
 // new操作符做了这些事：

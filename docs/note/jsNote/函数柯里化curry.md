@@ -1,3 +1,13 @@
+---
+title: 函数柯里化curry
+date: 2022-03-14 21:22:07
+permalink: /pages/b071d6/
+categories:
+  - note
+  - jsNote
+tags:
+  - 
+---
 # 函数柯里化
 ```javascript
 // 函数柯里化，是固定部分参数，返回一个接受剩余参数的函数，也称为部分计算函数，目的是为了缩小适用范围，创建一个针对性更强的函数。

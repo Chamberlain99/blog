@@ -1,3 +1,13 @@
+---
+title: object
+date: 2022-03-14 21:22:07
+permalink: /pages/d5b610/
+categories:
+  - note
+  - algorithm
+tags:
+  - 
+---
 # 为什么你的对象时快时慢呢
 
 [想知道原因大家可以点击查看V8官网](https://v8.dev/blog)

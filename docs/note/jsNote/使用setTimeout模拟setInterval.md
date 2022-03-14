@@ -1,3 +1,13 @@
+---
+title: 使用setTimeout模拟setInterval
+date: 2022-03-14 21:22:07
+permalink: /pages/7d59c9/
+categories:
+  - note
+  - jsNote
+tags:
+  - 
+---
 # 使用setTimeout模拟setInterval
 ```javascript
 // 可避免setInterval因执行时间导致的间隔执行时间不一致

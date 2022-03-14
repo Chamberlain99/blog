@@ -1,3 +1,13 @@
+---
+title: recursive_optimization
+date: 2022-03-14 21:22:07
+permalink: /pages/b36fa8/
+categories:
+  - note
+  - typescript
+tags:
+  - 
+---
 # 递归优化
 
 尾递归之所以需要优化，原因是调用栈太多，造成溢出，那么只要减少调用栈，就不会溢出。怎么做可以减少调用栈呢？就是采用“循环”换掉“递归”。

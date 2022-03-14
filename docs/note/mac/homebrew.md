@@ -1,3 +1,13 @@
+---
+title: homebrew
+date: 2022-03-14 21:22:07
+permalink: /pages/f8a3ab/
+categories:
+  - note
+  - mac
+tags:
+  - 
+---
 # homebrew
 
 mac 端的管理工具

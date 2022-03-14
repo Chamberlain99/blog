@@ -1,3 +1,13 @@
+---
+title: JavaScript&QA
+date: 2022-03-14 21:22:07
+permalink: /pages/b21b57/
+categories:
+  - note
+  - QA
+tags:
+  - 
+---
 # javascript & QA 
 
 ## karma使用

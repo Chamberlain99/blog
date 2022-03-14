@@ -1,3 +1,13 @@
+---
+title: nrm
+date: 2022-03-14 21:22:07
+permalink: /pages/ae3774/
+categories:
+  - note
+  - node
+tags:
+  - 
+---
 # nrm 安装以及使用
 
 易于使用，方便切换使用的 `npm` 源切换工具

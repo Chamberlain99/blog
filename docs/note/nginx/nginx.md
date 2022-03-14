@@ -1,3 +1,13 @@
+---
+title: nginx
+date: 2022-03-14 21:22:07
+permalink: /pages/2f5324/
+categories:
+  - note
+  - nginx
+tags:
+  - 
+---
 # Nginx 初探
 
 ## 配置文件

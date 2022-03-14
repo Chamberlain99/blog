@@ -1,3 +1,13 @@
+---
+title: graph
+date: 2022-03-14 21:22:07
+permalink: /pages/e95099/
+categories:
+  - note
+  - algorithm
+tags:
+  - 
+---
 # 图
 
 ```js

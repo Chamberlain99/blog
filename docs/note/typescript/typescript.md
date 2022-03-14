@@ -1,3 +1,13 @@
+---
+title: typescript
+date: 2022-03-14 21:22:07
+permalink: /pages/504c36/
+categories:
+  - note
+  - typescript
+tags:
+  - 
+---
 # typescript的基本知识
 
 ## 基础类型

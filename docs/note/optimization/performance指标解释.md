@@ -1,3 +1,13 @@
+---
+title: performance指标解释
+date: 2022-03-14 21:22:07
+permalink: /pages/36aaa3/
+categories:
+  - note
+  - optimization
+tags:
+  - 
+---
 # performance指标解释
 
 ## 页面的整个过程如下图

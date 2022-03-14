@@ -1,3 +1,13 @@
+---
+title: command_line
+date: 2022-03-14 21:22:07
+permalink: /pages/8da6ad/
+categories:
+  - note
+  - mac
+tags:
+  - 
+---
 # 一些 mac 常用的命令
 
 方便 mac 使用

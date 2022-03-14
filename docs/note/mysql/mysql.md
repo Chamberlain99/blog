@@ -1,3 +1,13 @@
+---
+title: mysql
+date: 2022-03-14 21:22:07
+permalink: /pages/6d567e/
+categories:
+  - note
+  - mysql
+tags:
+  - 
+---
 # Mysql 初探
 
 开源免费的关系型数据库

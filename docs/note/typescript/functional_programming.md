@@ -1,3 +1,13 @@
+---
+title: functional_programming
+date: 2022-03-14 21:22:07
+permalink: /pages/623f3d/
+categories:
+  - note
+  - typescript
+tags:
+  - 
+---
 # 函数式编程
 
 ## 范畴论 Category Theory

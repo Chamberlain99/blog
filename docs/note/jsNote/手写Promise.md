@@ -1,3 +1,13 @@
+---
+title: 手写Promise
+date: 2022-03-14 21:22:07
+permalink: /pages/30a0d4/
+categories:
+  - note
+  - jsNote
+tags:
+  - 
+---
 # 手写 Promise
 
 **Promise** 对象用于表示一个异步操作的最终完成 (或失败)及其结果值

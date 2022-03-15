@@ -14,6 +14,15 @@
             'sourceCode/vueBase'
         ]
     },
+    {  
+        title: '项目相关',
+        collapsable: true,
+        children: [
+            'project/资源可视化',
+          
+            
+        ]
+    },
     {
         title: '性能优化',
         collapsable: true,

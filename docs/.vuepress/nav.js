@@ -9,6 +9,10 @@
       //    {text:'vue2源码解读',link:'/vuesource/'}
       //  ]
      }
+    const componentLib = {
+        text:'组件库',
+        link:'https://evel-font-end.github.io/vue-baselib/dist/#/mapcharts'
+    }
 
    const more =  { 
         text: 'Github & 掘金', 
@@ -26,6 +30,7 @@ module.exports = [
     // home,
     post,
     more,
+    componentLib, //组件库
     // node,
     contact
 ]

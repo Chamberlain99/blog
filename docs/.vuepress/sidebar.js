@@ -37,6 +37,7 @@
             'optimization/performance指标解释',
         ]
     },
+    
     {
         title: '你不知道的css',
         collapsable: true,
@@ -45,6 +46,13 @@
             'cssNote/cssHoudini',
             'cssNote/css_matrix',
             'cssNote/css_split',
+        ]
+    },
+    {
+        title: '常见问题总结记录',
+        collapsable: true,
+        children: [
+            'problem/常见问题总结',
         ]
     },
     {
@@ -90,8 +98,8 @@
         children: [
             'node/node',
             'node/pm2',
-            'node/node_baseKnowledge',
-            'node/node_Advanced'
+            'node/node基础',
+            'node/node高级'
 
         ]
     },

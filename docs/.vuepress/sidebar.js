@@ -90,8 +90,8 @@
         children: [
             'node/node',
             'node/pm2',
-            'node/node_baseKnowledge',
-            'node/node_Advanced'
+            'node/node基础',
+            'node/node高级'
 
         ]
     },

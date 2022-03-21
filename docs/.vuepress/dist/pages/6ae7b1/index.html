@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>实现Symbol类型 | 程序员成长-修炼中心 「作者：陈楚城」</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/vue-press-blog-system/favicon.ico">
+    <meta name="description" content="个人博客-学习总结">
+    
+    <link rel="preload" href="/vue-press-blog-system/assets/css/0.styles.5f920e4a.css" as="style"><link rel="preload" href="/vue-press-blog-system/assets/js/app.d424937c.js" as="script"><link rel="preload" href="/vue-press-blog-system/assets/js/2.e84e5974.js" as="script"><link rel="preload" href="/vue-press-blog-system/assets/js/58.548917d5.js" as="script"><link rel="prefetch" href="/vue-press-blog-system/assets/js/10.bb26fb18.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/100.8cbf01ff.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/101.ffa6385d.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/11.8f259a9b.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/12.9cd0c743.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/13.54be31ee.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/14.63e37b06.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/15.4543839e.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/16.e030e1de.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/17.82cb9047.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/18.dfc085ad.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/19.8f227236.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/20.af8c4664.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/21.fbdda9ec.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/22.c96744c6.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/23.9b4b3131.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/24.2183b385.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/25.e66de4ee.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/26.5e9fabfd.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/27.f4268a4d.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/28.6b9211a6.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/29.51b16760.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/3.c66b2297.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/30.12fa9ca4.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/31.e317e87b.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/32.af259cab.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/33.35de215b.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/34.6e120f92.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/35.b272981c.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/36.5d44f270.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/37.61855288.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/38.ce886930.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/39.405614be.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/4.ad316e67.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/40.f5aa44b5.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/41.864faed5.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/42.a1d13a40.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/43.5352d80f.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/44.08d88f89.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/45.e7fb53aa.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/46.0504b5f7.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/47.645f2cb0.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/48.39c387aa.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/49.96a608be.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/5.0b8629d0.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/50.7d3f9602.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/51.6ff626e7.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/52.483462db.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/53.1e392ce0.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/54.9a7a33b0.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/55.9535f9e4.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/56.a349a124.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/57.a7b39dfe.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/59.007eb291.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/6.aa5c1183.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/60.d6faece8.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/61.3af9f21e.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/62.36e62777.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/63.bb04aabd.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/64.d7dc312b.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/65.d74f8314.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/66.db0a03b1.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/67.48df4dbf.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/68.8eee9329.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/69.451db127.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/7.54469edf.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/70.78037e92.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/71.636e7267.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/72.a8f7d4d2.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/73.fe6638c3.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/74.5c37b316.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/75.72d82fe7.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/76.0b09fa86.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/77.2286fd62.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/78.8d728316.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/79.08f77abc.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/8.e33d59c7.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/80.21251741.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/81.cec7c0f7.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/82.7981db14.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/83.132a5310.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/84.d3836960.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/85.2bfd82a9.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/86.36b6b4e4.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/87.56effb8b.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/88.1ad116fe.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/89.9da5471c.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/9.d22bc951.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/90.db77020e.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/91.8b411ec9.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/92.21d9881d.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/93.b1c91042.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/94.0147f844.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/95.fae36545.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/96.d50f3726.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/97.4b048880.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/98.f64de137.js"><link rel="prefetch" href="/vue-press-blog-system/assets/js/99.6ca7751a.js">
+    <link rel="stylesheet" href="/vue-press-blog-system/assets/css/0.styles.5f920e4a.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vue-press-blog-system/" class="home-link router-link-active"><!----> <span class="site-name">程序员成长-修炼中心 「作者：陈楚城」</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vue-press-blog-system/note/" class="nav-link">博客文章</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Github &amp; 掘金" class="dropdown-title"><!----> <span class="title" style="display:;">Github &amp; 掘金</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/chamberlain99" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/1855631360537159/posts" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="https://evel-font-end.github.io/vue-baselib/dist/#/mapcharts" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  组件库
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="/vue-press-blog-system/contact/" class="nav-link">关于我</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><!----> <nav class="nav-links"><div class="nav-item"><a href="/vue-press-blog-system/note/" class="nav-link">博客文章</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Github &amp; 掘金" class="dropdown-title"><!----> <span class="title" style="display:;">Github &amp; 掘金</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/chamberlain99" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/1855631360537159/posts" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="https://evel-font-end.github.io/vue-baselib/dist/#/mapcharts" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  组件库
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="/vue-press-blog-system/contact/" class="nav-link">关于我</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/vue-press-blog-system/" aria-current="page" class="sidebar-link">写在前面</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>vue3学习总结</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>项目相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>性能优化</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>你不知道的css</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>常见问题总结记录</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构与算法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>TypeScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Node</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTTP</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>OS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Python</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Java</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Nginx</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>项目工程化</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>常用工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>自动化</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>js相关</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-press-blog-system/pages/b071d6/" class="sidebar-link">函数柯里化curry</a></li><li><a href="/vue-press-blog-system/pages/6d6059/" class="sidebar-link">继承</a></li><li><a href="/vue-press-blog-system/pages/7d59c9/" class="sidebar-link">使用setTimeout模拟setInterval</a></li><li><a href="/vue-press-blog-system/pages/ad6469/" class="sidebar-link">手写防抖和节流</a></li><li><a href="/vue-press-blog-system/pages/9571b3/" class="sidebar-link">手写实现拖拽</a></li><li><a href="/vue-press-blog-system/pages/895434/" class="sidebar-link">create</a></li><li><a href="/vue-press-blog-system/pages/e9535b/" class="sidebar-link">手写一个call或apply</a></li><li><a href="/vue-press-blog-system/pages/cd3436/" class="sidebar-link">bind</a></li><li><a href="/vue-press-blog-system/pages/a40dc5/" class="sidebar-link">手写一个instanceOf原理</a></li><li><a href="/vue-press-blog-system/pages/1282c5/" class="sidebar-link">手写一个JS深拷贝</a></li><li><a href="/vue-press-blog-system/note/jsNote/手写一个JSON.parse和JSOn.stringify.html" class="sidebar-link">手写一个JSON.parse和JSOn.stringify</a></li><li><a href="/vue-press-blog-system/pages/e88f4b/" class="sidebar-link">手写一个map和reduce</a></li><li><a href="/vue-press-blog-system/pages/0828a5/" class="sidebar-link">手写一个new操作符</a></li><li><a href="/vue-press-blog-system/pages/1a6d58/" class="sidebar-link">LRU缓存算法</a></li><li><a href="/vue-press-blog-system/pages/30a0d4/" class="sidebar-link">手写Promise</a></li><li><a href="/vue-press-blog-system/pages/bfc587/" class="sidebar-link">set</a></li><li><a href="/vue-press-blog-system/pages/e63df3/" class="sidebar-link">random</a></li><li><a href="/vue-press-blog-system/pages/556aab/" class="sidebar-link">原型</a></li><li><a href="/vue-press-blog-system/pages/6ae7b1/" aria-current="page" class="active sidebar-link">实现Symbol类型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue-press-blog-system/pages/6ae7b1/#前言" class="sidebar-link">前言</a></li><li class="sidebar-sub-header"><a href="/vue-press-blog-system/pages/6ae7b1/#回顾" class="sidebar-link">回顾</a></li><li class="sidebar-sub-header"><a href="/vue-press-blog-system/pages/6ae7b1/#分析" class="sidebar-link">分析</a></li><li class="sidebar-sub-header"><a href="/vue-press-blog-system/pages/6ae7b1/#第一版" class="sidebar-link">第一版</a></li><li class="sidebar-sub-header"><a href="/vue-press-blog-system/pages/6ae7b1/#第二版" class="sidebar-link">第二版</a></li><li class="sidebar-sub-header"><a href="/vue-press-blog-system/pages/6ae7b1/#第三版" class="sidebar-link">第三版</a></li><li class="sidebar-sub-header"><a href="/vue-press-blog-system/pages/6ae7b1/#第四版" class="sidebar-link">第四版</a></li><li class="sidebar-sub-header"><a href="/vue-press-blog-system/pages/6ae7b1/#第五版" class="sidebar-link">第五版</a></li><li class="sidebar-sub-header"><a href="/vue-press-blog-system/pages/6ae7b1/#完整实现" class="sidebar-link">完整实现</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>QA相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>文章收藏</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-3c4b8ee7><div class="articleInfo" data-v-3c4b8ee7><ul class="breadcrumbs" data-v-3c4b8ee7><li data-v-3c4b8ee7><a href="/vue-press-blog-system/" title="首页" class="iconfont icon-home router-link-active" data-v-3c4b8ee7></a></li> <li data-v-3c4b8ee7><a href="/vue-press-blog-system/categories/?category=note" title="分类" data-v-3c4b8ee7>note</a></li><li data-v-3c4b8ee7><a href="/vue-press-blog-system/categories/?category=jsNote" title="分类" data-v-3c4b8ee7>jsNote</a></li></ul> <div class="info" data-v-3c4b8ee7><!----> <div title="创建时间" class="date iconfont icon-riqi" data-v-3c4b8ee7><a href="javascript:;" data-v-3c4b8ee7>2022-03-14</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABKFJREFUSA3tVl1oFVcQnrMbrak3QUgkya1akpJYcrUtIqW1JvFBE9LiQ5v6JmJpolbMg32rVrhgoYK0QiMY6i9Y6EMaW5D+xFJaTYItIuK2Kr3+BJNwkxBj05sQY3b3nM6cs2dv9t7NT/vQJw/sndk5M/PNzJkzewGerP+pAmy+ON8lLzUJgA8ZYxYIYZmGYRnctDaWvJJAmTtfP1pvXsBCCPP8QFcCaRkZYACgDZFO4stNIcBCajEOlmmC9XpJ9bAGCaPaPmzPl32dvLSVu3BWCTQs0XQQ6g0DYgwLIoAZbBCdW/i+781o1VVlm/410mw4h06Y7bIPHNyWDyL4FHkX03Q8SrzNhZTZriieckWt7cL6MM85YcLpsi/7O9/iXFT6MswI0DmmpkSaJ0qLxFIm3+i1THHB3zmBH3PYx9CcykcLOeQVVa7QtdxTgQgEleX2AjHYfwA+2ddV77ruGoJUbhGDI09YSNXyMpUt5ylOzxgbUmtOp7NmbNt8v3arjTBfYELmLUV+M+nSawNNAUqpT3ClJWg5I3BLT+cGW/DXNGCa6tx1aakCGEigArTn4TDIPdrXXYKCZNrHLMCOEPvHBlLQ99s9eHB7EB6NTki73CVPQ2F5MSx/uRQixfmq7rK0wYD8w8E905bnPDfwoWs/rfv93NWN/ZfvwsLIU7A09gxECyISeGJkHAau98L97tuw7NXnoPyNF8FcYGLGKsOs0mN3OEyec9esGW/ZEl945dTP34wlR2FZVQWU1q0Cw8Tr7p+hgLLNL0FPxx/Q35mA8aEUrH6nCgwEl0tn7wUiZYJnNRh6DK4UH/k0lfyrsBKdPVv/AriGIQcEDQZ65LBAGe2Rzui9Ybjz7XUppz1/uKBbyVPGkN3ZAeC6hr0x7Nr38N5+EqkoOm17xpoqR9ohQF55ERSvr4Dkr3chNfC3DMzGJlNBElW8w9nsGQvhNGIzDkXzCg8cLK951xHsFBlTJspJNi3ZFIMF2AeDV3q8DNOB+YHi6QTrChDIWDBRi5U5f+ZMfJLu3ccrqxtdxk4SKH336LFxSmkqefwU5T8fhdSdQf9IVKD6aNiwI/hnmcAZ91isYMJIaCUCx9W098+LgruikeTqzqqxKPUwqJyCPJiyemVVZBOijDGjD38Os0jOiSPL1z3SPjXNANbiNPXAdzTfukjjuknNBbyz3nwgTd3AVFqUJ5hpHlq9MveLnWwttUfoygBmvVjuikxND3znrhsELnZk7k+OjIGxeNEkomyLVta0xxn+HZhjBc4YZ/AFjHjz9u3xRZl2BN4aq9nFwWh16IrQ1aHHEd3j1+4/dB9OtH4e29A2H1DyHQRmOSfQZ1Fy7MHBTGB6J/Djq6p3OxyO2cB+4Car7v/o3GXgfAkj23+x9ID1Teoamo/SXcbvSf2PX7Vc8DdCmE1vN9di+32P9/5YR3vLnhCVGUWBjEkr3yh4H8v9CzmsbdhzOKzsJKM90iFdaTMjRPhGVsakRvOaRidljo6H6G7j+ctrJpsP+4COhDIl0La2+FS4+5mlocBaXY5QnGZysIBYoeSsl5qQzrSj/cgNrfuEzlWBfwA+EjrZyWUvpAAAAABJRU5ErkJggg==">实现Symbol类型<!----></h1> <!----> <div class="theme-vdoing-content content__default"><h1 id="实现symbol类型"><a href="#实现symbol类型" class="header-anchor">#</a> 实现Symbol类型</h1> <h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <p>实际上，Symbol 的很多特性都无法模拟实现……所以先让我们回顾下有哪些特性，然后挑点能实现的……当然在看的过程中，你也可以思考这个特性是否能实现，如果可以实现，该如何实现。</p> <h2 id="回顾"><a href="#回顾" class="header-anchor">#</a> 回顾</h2> <p>ES6 引入了一种新的原始数据类型 Symbol，表示独一无二的值。</p> <p><strong>1. Symbol 值通过 Symbol 函数生成，使用 typeof，结果为 &quot;symbol&quot;</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var s = Symbol();
+console.log(typeof s); // &quot;symbol&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><strong>2. Symbol 函数前不能使用 new 命令，否则会报错。这是因为生成的 Symbol 是一个原始类型的值，不是对象。</strong></p> <p><strong>3. instanceof 的结果为 false</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var s = Symbol('foo');
+console.log(s instanceof Symbol); // false
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><strong>4. Symbol 函数可以接受一个字符串作为参数，表示对 Symbol 实例的描述，主要是为了在控制台显示，或者转为字符串时，比较容易区分。</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var s1 = Symbol('foo');
+console.log(s1); // Symbol(foo)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><strong>5. 如果 Symbol 的参数是一个对象，就会调用该对象的 toString 方法，将其转为字符串，然后才生成一个 Symbol 值。</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const obj = {
+  toString() {
+    return 'abc';
+  }
+};
+const sym = Symbol(obj);
+console.log(sym); // Symbol(abc)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><strong>6. Symbol 函数的参数只是表示对当前 Symbol 值的描述，相同参数的 Symbol 函数的返回值是不相等的。</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 没有参数的情况
+var s1 = Symbol();
+var s2 = Symbol();
+
+console.log(s1 === s2); // false
+
+// 有参数的情况
+var s1 = Symbol('foo');
+var s2 = Symbol('foo');
+
+console.log(s1 === s2); // false
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p><strong>7. Symbol 值不能与其他类型的值进行运算，会报错。</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var sym = Symbol('My symbol');
+
+console.log(&quot;your symbol is &quot; + sym); // TypeError: can't convert symbol to string
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><strong>8. Symbol 值可以显式转为字符串。</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var sym = Symbol('My symbol');
+
+console.log(String(sym)); // 'Symbol(My symbol)'
+console.log(sym.toString()); // 'Symbol(My symbol)'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>9. Symbol 值可以作为标识符，用于对象的属性名，可以保证不会出现同名的属性。</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var mySymbol = Symbol();
+
+// 第一种写法
+var a = {};
+a[mySymbol] = 'Hello!';
+
+// 第二种写法
+var a = {
+  [mySymbol]: 'Hello!'
+};
+
+// 第三种写法
+var a = {};
+Object.defineProperty(a, mySymbol, { value: 'Hello!' });
+
+// 以上写法都得到同样结果
+console.log(a[mySymbol]); // &quot;Hello!&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p><strong>10. Symbol 作为属性名，该属性不会出现在 for...in、for...of 循环中，也不会被 Object.keys()、Object.getOwnPropertyNames()、JSON.stringify() 返回。但是，它也不是私有属性，有一个 Object.getOwnPropertySymbols 方法，可以获取指定对象的所有 Symbol 属性名。</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var obj = {};
+var a = Symbol('a');
+var b = Symbol('b');
+
+obj[a] = 'Hello';
+obj[b] = 'World';
+
+var objectSymbols = Object.getOwnPropertySymbols(obj);
+
+console.log(objectSymbols);
+// [Symbol(a), Symbol(b)]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p><strong>11. 如果我们希望使用同一个 Symbol 值，可以使用 Symbol.for。它接受一个字符串作为参数，然后搜索有没有以该参数作为名称的 Symbol 值。如果有，就返回这个 Symbol 值，否则就新建并返回一个以该字符串为名称的 Symbol 值。</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var s1 = Symbol.for('foo');
+var s2 = Symbol.for('foo');
+
+console.log(s1 === s2); // true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>12. Symbol.keyFor 方法返回一个已登记的 Symbol 类型值的 key。</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var s1 = Symbol.for(&quot;foo&quot;);
+console.log(Symbol.keyFor(s1)); // &quot;foo&quot;
+
+var s2 = Symbol(&quot;foo&quot;);
+console.log(Symbol.keyFor(s2) ); // undefined
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="分析"><a href="#分析" class="header-anchor">#</a> 分析</h2> <p>看完以上的特性，你觉得哪些特性是可以模拟实现的呢？</p> <p>如果我们要模拟实现一个 Symbol 的话，基本的思路就是构建一个 Symbol 函数，然后直接返回一个独一无二的值。</p> <p>不过在此之前，我们先看看<a href="http://www.ecma-international.org/ecma-262/6.0/#sec-symbol-description" target="_blank" rel="noopener noreferrer">规范<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>中调用 Symbol 时到底做了哪些工作：</p> <blockquote><p>Symbol ( [ description ] )</p></blockquote> <blockquote><p>When Symbol is called with optional argument description, the following steps are taken:</p></blockquote> <blockquote><ol><li>If NewTarget is not undefined, throw a TypeError exception.</li> <li>If description is undefined, var descString be undefined.</li> <li>Else, var descString be ToString(description).</li> <li>ReturnIfAbrupt(descString).</li> <li>Return a new unique Symbol value whose [[Description]] value is descString.</li></ol></blockquote> <p>当调用 Symbol 的时候，会采用以下步骤：</p> <ol><li>如果使用 new ，就报错</li> <li>如果 description 是 undefined，让 descString 为 undefined</li> <li>否则 让 descString 为 ToString(description)</li> <li>如果报错，就返回</li> <li>返回一个新的唯一的 Symbol 值，它的内部属性 [[Description]] 值为 descString</li></ol> <p>考虑到还需要定义一个 [[Description]] 属性，如果直接返回一个基本类型的值，是无法做到这一点的，所以我们最终还是返回一个对象。</p> <h2 id="第一版"><a href="#第一版" class="header-anchor">#</a> 第一版</h2> <p>参照着规范，其实我们已经可以开始写起来了：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 第一版
+(function() {
+    var root = this;
+
+    var SymbolPolyfill = function Symbol(description) {
+
+        // 实现特性第 2 点：Symbol 函数前不能使用 new 命令
+        if (this instanceof SymbolPolyfill) throw new TypeError('Symbol is not a constructor');
+
+        // 实现特性第 5 点：如果 Symbol 的参数是一个对象，就会调用该对象的 toString 方法，将其转为字符串，然后才生成一个 Symbol 值。
+        var descString = description === undefined ? undefined : String(description)
+
+        var symbol = Object.create(null)
+
+        Object.defineProperties(symbol, {
+            '__Description__': {
+                value: descString,
+                writable: false,
+                enumerable: false,
+                configurable: false
+            }
+        });
+
+        // 实现特性第 6 点，因为调用该方法，返回的是一个新对象，两个对象之间，只要引用不同，就不会相同
+        return symbol;
+    }
+
+    root.SymbolPolyfill = SymbolPolyfill;
+})();
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br></div></div><p>只是参照着规范，我们已经实现了特性的第 2、5、6 点。</p> <h2 id="第二版"><a href="#第二版" class="header-anchor">#</a> 第二版</h2> <p>我们来看看其他的特性该如何实现：</p> <p><strong>1. 使用 typeof，结果为 &quot;symbol&quot;。</strong></p> <p>利用 ES5，我们并不能修改 typeof 操作符的结果，所以这个无法实现。</p> <p><strong>3. instanceof 的结果为 false</strong></p> <p>因为不是通过 new 的方式实现的，所以 instanceof 的结果自然是 false。</p> <p><strong>4. Symbol 函数可以接受一个字符串作为参数，表示对 Symbol 实例的描述。主要是为了在控制台显示，或者转为字符串时，比较容易区分。</strong></p> <p>当我们打印一个原生 Symbol 值的时候：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>console.log(Symbol('1')); // Symbol(1)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>可是我们模拟实现的时候返回的却是一个对象，所以这个也是无法实现的，当然你修改 console.log 这个方法是另讲。</p> <p><strong>8. Symbol 值可以显式转为字符串。</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var sym = Symbol('My symbol');
+
+console.log(String(sym)); // 'Symbol(My symbol)'
+console.log(sym.toString()); // 'Symbol(My symbol)'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>当调用 String 方法的时候，如果该对象有 toString 方法，就会调用该 toString 方法，所以我们只要给返回的对象添加一个 toString 方法，即可实现这两个效果。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 第二版
+
+// 前面面代码相同 ……
+
+var symbol = Object.create({
+    toString: function() {
+        return 'Symbol(' + this.__Description__ + ')';
+    },
+});
+
+// 后面代码相同 ……
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h2 id="第三版"><a href="#第三版" class="header-anchor">#</a> 第三版</h2> <p><strong>9. Symbol 值可以作为标识符，用于对象的属性名，可以保证不会出现同名的属性。</strong></p> <p>看着好像没什么，这点其实和第 8 点是冲突的，这是因为当我们模拟的所谓 Symbol 值其实是一个有着 toString 方法的 对象，当对象作为对象的属性名的时候，就会进行隐式类型转换，还是会调用我们添加的 toString 方法，对于 Symbol('foo') 和 Symbol('foo')两个 Symbol 值，虽然描述一样，但是因为是两个对象，所以并不相等，但是当作为对象的属性名的时候，都会隐式转换为 <code>Symbol(foo)</code> 字符串，这个时候就会造成同名的属性。举个例子：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var a = SymbolPolyfill('foo');
+var b = SymbolPolyfill('foo');
+
+console.log(a ===  b); // false
+
+var o = {};
+o[a] = 'hello';
+o[b] = 'hi';
+
+console.log(o); // {Symbol(foo): 'hi'}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>为了防止不会出现同名的属性，毕竟这是一个非常重要的特性，迫不得已，我们需要修改 toString 方法，让它返回一个唯一值，所以第 8 点就无法实现了，而且我们还需要再写一个用来生成 唯一值的方法，就命名为 generateName，我们将该唯一值添加到返回对象的 <strong>Name</strong> 属性中保存下来。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 第三版
+(function() {
+    var root = this;
+
+    var generateName = (function(){
+        var postfix = 0;
+        return function(descString){
+            postfix++;
+            return '@@' + descString + '_' + postfix
+        }
+    })()
+
+    var SymbolPolyfill = function Symbol(description) {
+
+        if (this instanceof SymbolPolyfill) throw new TypeError('Symbol is not a constructor');
+
+        var descString = description === undefined ? undefined : String(description)
+
+        var symbol = Object.create({
+            toString: function() {
+                return this.__Name__;
+            }
+        })
+
+        Object.defineProperties(symbol, {
+            '__Description__': {
+                value: descString,
+                writable: false,
+                enumerable: false,
+                configurable: false
+            },
+            '__Name__': {
+                value: generateName(descString),
+                writable: false,
+                enumerable: false,
+                configurable: false
+            }
+        });
+
+        return symbol;
+    }
+
+
+    root.SymbolPolyfill = SymbolPolyfill;
+
+})()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br></div></div><p>此时再看下这个例子：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var a = SymbolPolyfill('foo');
+var b = SymbolPolyfill('foo');
+
+console.log(a ===  b); // false
+
+var o = {};
+o[a] = 'hello';
+o[b] = 'hi';
+
+console.log(o); // Object { &quot;@@foo_1&quot;: &quot;hello&quot;, &quot;@@foo_2&quot;: &quot;hi&quot; }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="第四版"><a href="#第四版" class="header-anchor">#</a> 第四版</h2> <p>我们再看看接下来的特性。</p> <p>** 7.Symbol 值不能与其他类型的值进行运算，会报错。**</p> <p>以 <code>+</code> 操作符为例，当进行隐式类型转换的时候，会先调用对象的 valueOf 方法，如果没有返回基本值，就会再调用 toString 方法，所以我们考虑在 valueOf 方法中进行报错，比如：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var symbol = Object.create({
+    valueOf: function() {
+        throw new Error('Cannot convert a Symbol value')
+    }
+})
+
+console.log('1' + symbol); // 报错
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>看着很简单的解决了这个问题，可是如果我们是显式调用 valueOf 方法呢？对于一个原生的 Symbol 值：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var s1 = Symbol('foo')
+console.log(s1.valueOf()); // Symbol(foo)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>是的，对于原生 Symbol，显式调用 valueOf 方法，会直接返回该 Symbol 值，而我们又无法判断是显式还是隐式的调用，所以这个我们就只能实现一半，要不然实现隐式调用报错，要不然实现显式调用返回该值，那……我们选择不报错的那个吧，即后者。</p> <p>我们迫不得已的修改 valueOf 函数：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 第四版
+// 前面面代码相同 ……
+
+var symbol = Object.create({
+    toString: function() {
+        return this.__Name__;
+    },
+    valueOf: function() {
+        return this;
+    }
+});
+// 后面代码相同 ……
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h2 id="第五版"><a href="#第五版" class="header-anchor">#</a> 第五版</h2> <p><strong>10. Symbol 作为属性名，该属性不会出现在 for...in、for...of 循环中，也不会被 Object.keys()、Object.getOwnPropertyNames()、JSON.stringify() 返回。但是，它也不是私有属性，有一个 Object.getOwnPropertySymbols 方法，可以获取指定对象的所有 Symbol 属性名。</strong></p> <p>嗯，无法实现。</p> <p><strong>11. 有时，我们希望重新使用同一个Symbol值，Symbol.for方法可以做到这一点。它接受一个字符串作为参数，然后搜索有没有以该参数作为名称的Symbol值。如果有，就返回这个Symbol值，否则就新建并返回一个以该字符串为名称的Symbol值。</strong></p> <p>这个实现类似于函数记忆，我们建立一个对象，用来储存已经创建的 Symbol 值即可。</p> <p><strong>12. Symbol.keyFor 方法返回一个已登记的 Symbol 类型值的 key。</strong></p> <p>遍历 forMap,查找该值对应的键值即可。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 第五版
+// 前面代码相同 ……
+var SymbolPolyfill = function() { ... }
+
+var forMap = {};
+
+Object.defineProperties(SymbolPolyfill, {
+    'for': {
+        value: function(description) {
+            var descString = description === undefined ? undefined : String(description)
+            return forMap[descString] ? forMap[descString] : forMap[descString] = SymbolPolyfill(descString);
+        },
+        writable: true,
+        enumerable: false,
+        configurable: true
+    },
+    'keyFor': {
+        value: function(symbol) {
+            for (var key in forMap) {
+                if (forMap[key] === symbol) return key;
+            }
+        },
+        writable: true,
+        enumerable: false,
+        configurable: true
+    }
+});
+// 后面代码相同 ……
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><h2 id="完整实现"><a href="#完整实现" class="header-anchor">#</a> 完整实现</h2> <p>综上所述：</p> <p>无法实现的特性有：1、4、7、8、10</p> <p>可以实现的特性有：2、3、5、6、9、11、12</p> <p>最后的实现如下:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(function() {
+    var root = this;
+
+    var generateName = (function(){
+        var postfix = 0;
+        return function(descString){
+            postfix++;
+            return '@@' + descString + '_' + postfix
+        }
+    })()
+
+    var SymbolPolyfill = function Symbol(description) {
+
+        if (this instanceof SymbolPolyfill) throw new TypeError('Symbol is not a constructor');
+
+        var descString = description === undefined ? undefined : String(description)
+
+        var symbol = Object.create({
+            toString: function() {
+                return this.__Name__;
+            },
+            valueOf: function() {
+                return this;
+            }
+        })
+
+        Object.defineProperties(symbol, {
+            '__Description__': {
+                value: descString,
+                writable: false,
+                enumerable: false,
+                configurable: false
+            },
+            '__Name__': {
+                value: generateName(descString),
+                writable: false,
+                enumerable: false,
+                configurable: false
+            }
+        });
+
+        return symbol;
+    }
+
+    var forMap = {};
+
+    Object.defineProperties(SymbolPolyfill, {
+        'for': {
+            value: function(description) {
+                var descString = description === undefined ? undefined : String(description)
+                return forMap[descString] ? forMap[descString] : forMap[descString] = SymbolPolyfill(descString);
+            },
+            writable: true,
+            enumerable: false,
+            configurable: true
+        },
+        'keyFor': {
+            value: function(symbol) {
+                for (var key in forMap) {
+                    if (forMap[key] === symbol) return key;
+                }
+            },
+            writable: true,
+            enumerable: false,
+            configurable: true
+        }
+    });
+
+    root.SymbolPolyfill = SymbolPolyfill;
+
+})()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br></div></div></div></div> <!----> <div class="page-edit"><!----> <!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">3/15/2022, 12:28:01 AM</span></div></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/vue-press-blog-system/pages/556aab/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">原型</div></a> <a href="/vue-press-blog-system/pages/b21b57/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">JavaScript&amp;QA</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/vue-press-blog-system/pages/556aab/" class="prev">原型</a></span> <span class="next"><a href="/vue-press-blog-system/pages/b21b57/">JavaScript&amp;QA</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/vue-press-blog-system/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/vue-press-blog-system/pages/879be7/"><div>
+            常见问题总结
+            <!----></div></a> <span class="date">03-16</span></dt></dl><dl><dd>02</dd> <dt><a href="/vue-press-blog-system/pages/a49f64/"><div>
+            资源可视化
+            <!----></div></a> <span class="date">03-16</span></dt></dl><dl><dd>03</dd> <dt><a href="/vue-press-blog-system/pages/b10154/"><div>
+            node_Advanced
+            <!----></div></a> <span class="date">03-15</span></dt></dl> <dl><dd></dd> <dt><a href="/vue-press-blog-system/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><!----> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> <!----></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"><!----></div></div>
+    <script src="/vue-press-blog-system/assets/js/app.d424937c.js" defer></script><script src="/vue-press-blog-system/assets/js/2.e84e5974.js" defer></script><script src="/vue-press-blog-system/assets/js/58.548917d5.js" defer></script>
+  </body>
+</html>

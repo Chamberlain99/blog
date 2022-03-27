@@ -19,8 +19,6 @@
         collapsable: true,
         children: [
             'project/资源可视化',
-          
-            
         ]
     },
     {

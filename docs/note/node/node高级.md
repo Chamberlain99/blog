@@ -26,7 +26,7 @@ tags:
 
 node由核心模块、第三方模块、用户模块组成。
 
-### [#](https://heima-docs.vercel.app/node高级/#_2-1-核心模块)[2.1 核心模块](http://nodejs.cn/api/)
+### [2.1 核心模块](http://nodejs.cn/api/)
 
 官方发现一些功能模块使用非常频繁，所以官方把这些模块，编译成了二进制可执行文件，打包到了Node的安装包中；这些核心模块就已经随着安装Node时候，被安装到了本地；
 
@@ -36,7 +36,7 @@ const http = require('http');
 const fs = require('fs');
 ```
 
-### [#](https://heima-docs.vercel.app/node高级/#_2-2-第三方模块)2.2 第三方模块
+### 2.2 第三方模块
 
 除了官方提供的好用的核心模块之外，我们程序员发现，还有一些使用也很频繁的代码和方法，一些牛逼的团体、个人、公司，开发出了好用的模块，通过NPM官网，托管出去，供其他人下载使用的这些模块；统称为第三方模块；
 
@@ -45,7 +45,7 @@ const moment = require('moment'); // 用于时间处理的一个第三方库
 const express = require('express'); // 用于网络处理的第三方框架
 ```
 
-### [#](https://heima-docs.vercel.app/node高级/#_2-3-用户模块)2.3 用户模块
+### 2.3 用户模块
 
 除了第三方模块外，由于自身业务的需要还会存在业务代码，我们把功能相似的业务代码封装在一个JS中，称为用户模块。
 
@@ -77,13 +77,13 @@ const myUtils = require('./utils/index'); // 自己封装的工具
 
 我们知道引入jquery或者第三方库的方法是在页面通过`<script>`标签引入。但是大家想想，如果应用很复杂，依赖第三方库有数十个之多，你需要手动下载第三方库，如果第三方库版本出现更新，你同样需要更新，这样的管理方式过于繁琐。所以在node中，作者对第三方库使用一个叫npm(node package manager)包管理器进行管理。
 
-### [#](https://heima-docs.vercel.app/node高级/#_3-1-包管理器的安装)3.1 包管理器的安装
+### 3.1 包管理器的安装
 
 npm是node默认的包管理器，只要安装node就会有npm工具，可以在控制台输入`npm -v`按回车，就会显示当前npm版本。
 
 ![image-20200709145754752](../../.vuepress/public/node/image-20200709145754752.3100bbc9.png)
 
-### [#](https://heima-docs.vercel.app/node高级/#_3-2-使用npm初始化项目)3.2 使用npm初始化项目
+### 3.2 使用npm初始化项目
 
 如果你的项目希望使用npm管理第三方库，那么在开发项目前需要进行初始化。
 

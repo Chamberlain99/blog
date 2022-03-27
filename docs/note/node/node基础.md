@@ -205,7 +205,7 @@ fs.writeFile(filePath,'黑马程序员','utf-8',(err)=>{
 });
 ```
 
-#### [#](https://heima-docs.vercel.app/node基础/#_5-4-2-使用path工具处理路径)5.4.2 **使用path工具处理路径**
+#### 5.4.2 **使用path工具处理路径**
 
 `path` 模块提供了一些实用方法，用于处理文件和目录的路径。 可以使用以下方式访问它：
 
@@ -258,7 +258,7 @@ const filePath = path.join(__dirname, '../bbb.txt');
 
 刚才我们了解到服务器是用来存储用户和处理信息的。那服务器是放在哪，又怎么找到它？他们之间是如何通讯的？
 
-#### [#](https://heima-docs.vercel.app/node基础/#_6-1-1-url的组成)6.1.1 URL的组成
+#### 6.1.1 URL的组成
 
 刚才我们访问页面是在浏览器输入地址http://192.168.1.2:3001/test.html，我们把这个地址称为**URL**(Uniform Resource Locator,统一资源定位符)。它的作用和我们平时写信需要填省市区、详细地址、姓名，目的是一样的，信件信息是为了找到收件人，URL为了找到服务器上的资源。
 
@@ -275,7 +275,7 @@ const filePath = path.join(__dirname, '../bbb.txt');
 
 **test.html** 服务器端的文件路径 （收货人姓名）
 
-#### [#](https://heima-docs.vercel.app/node基础/#_6-1-2-http协议)6.1.2 HTTP协议
+#### 6.1.2 HTTP协议
 
 HTTP协议：Hypertext Transfer Protocol，超文本传输**协议**，用于客户端与服务端间通讯。
 
@@ -309,9 +309,9 @@ HTTP协议诞生于1989年3月，是由CERN（欧洲核子研究组织）的蒂�
 
 TODO 补充一个完整的浏览器和服务端数据交互图
 
-#### [#](https://heima-docs.vercel.app/node基础/#_6-1-3-get和post请求)6.1.3 GET和POST请求
+#### 6.1.3 GET和POST请求
 
-##### [#](https://heima-docs.vercel.app/node基础/#get请求)GET请求
+##### GET请求
 
 ```javascript
   <form action="/userLogin" method="get">
@@ -332,7 +332,7 @@ GET请求特点：
 1. 提交参数拼接到URL后面
 2. 传递数据量小，4KB左右（不同浏览器会有差异）
 
-##### [#](https://heima-docs.vercel.app/node基础/#post请求)POST请求
+##### POST请求
 
 ```javascript
   <form action="/userLogin" method="post">
@@ -401,7 +401,7 @@ server.listen(3000,'127.0.0.1',(err)=>{
 });
 ```
 
-### 使用[writeHead](http://nodejs.cn/api/http.html#http_response_writehead_statuscode_statusmessage_headers)修改响应头
+### 使用writeHead修改响应头
 
 当我们使用res.end方法响应数据时，会出现中文乱码，我们需要调用`res.writeHead`方法设置响应头信息，其中响应头中的`content-type`可以设置中文字符集。
 

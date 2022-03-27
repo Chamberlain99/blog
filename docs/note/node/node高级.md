@@ -107,9 +107,9 @@ npm是node默认的包管理器，只要安装node就会有npm工具，可以在
 }
 ```
 
-### [#](https://heima-docs.vercel.app/node高级/#_3-3-使用npm命令安装第三方模块)3.3 使用npm命令安装第三方模块
+### 3.3 使用npm命令安装第三方模块
 
-#### [#](https://heima-docs.vercel.app/node高级/#_3-3-1-安装到当前目录)3.3.1 安装到当前目录
+#### 3.3.1 安装到当前目录
 
 ```bash
 // 安装命令为npm install 第三方模块名字
@@ -118,7 +118,7 @@ npm install moment
 
 执行上面的命令后，你会看到在执行命令的根目录有一个叫`node_module`的文件夹，里面就是用来存放我们的第三方模块的；另外还有一个`package-lock.json`用来记录第三方模块下载地址，下次安装或更新直接用记录地址，下载速度会比较快。
 
-#### [#](https://heima-docs.vercel.app/node高级/#_3-3-2-记录依赖)3.3.2 记录依赖
+#### 3.3.2 记录依赖
 
 node_module文件夹在大型项中往往非常庞大，如果你需要把项目拷贝给他人，通常会把node_module先删除。
 
@@ -134,7 +134,7 @@ node_module文件夹在大型项中往往非常庞大，如果你需要把项目
 }
 ```
 
-#### [#](https://heima-docs.vercel.app/node高级/#_3-3-3-全局安装（了解即可）)3.3.3 全局安装（了解即可）
+#### 3.3.3 全局安装（了解即可）
 
 有些第三方模块需要全局安装，可以通过`-g`参数，例如后面学习的vue-cli就要求全局安装。
 
@@ -142,7 +142,7 @@ node_module文件夹在大型项中往往非常庞大，如果你需要把项目
 npm install -g @vue/cli
 ```
 
-#### [#](https://heima-docs.vercel.app/node高级/#_3-3-4-删除依赖)3.3.4 删除依赖
+#### 3.3.4 删除依赖
 
 如果你希望移除某个第三方库，可以通过`npm uninstall`命令
 
@@ -150,11 +150,11 @@ npm install -g @vue/cli
 npm uninstall moment
 ```
 
-### [#](https://heima-docs.vercel.app/node高级/#_3-4-如果你被墙了)3.4 如果你被墙了
+### 3.4 如果你被墙了
 
 使用npm安装依赖的时候，往往等待很久都没安装完毕，这是因为npm的资源存放在国外服务器，所以导致下载时间会很久甚至下载失败，可以使用nrm工具切换下载地址提升下载速度。
 
-#### [#](https://heima-docs.vercel.app/node高级/#方法一：切换到国内请求源)方法一：切换到国内请求源
+#### 方法一：切换到国内请求源
 
 在cmd执行下面命令，把下载源切换到淘宝
 
@@ -168,7 +168,7 @@ npm config set registry https://registry.npm.taobao.org
 npm config get registry
 ```
 
-#### [#](https://heima-docs.vercel.app/node高级/#方法二：使用nrm切换)方法二：使用nrm切换
+#### 方法二：使用nrm切换
 
 1.安装：
 
@@ -300,7 +300,7 @@ const monent = require('moment')
 
 第一节就讲过，模块化就是将功能相似的内容放到一个文件。在这一节，我们通过一个案例学习如何把一个大功能划分到不同模块，如何通过MVC设计模式优化代码。
 
-### [#](https://heima-docs.vercel.app/node高级/#_8-1-设计模式)8.1 设计模式
+### 8.1 设计模式
 
 **设计模式**（Design Pattern）是前辈们对代码开发经验的总结，是解决特定问题的一系列套路。它不是语法规定，而是一套用来提高代码可复用性、可维护性、可读性、稳健性以及安全性的解决方案。
 
@@ -310,7 +310,7 @@ const monent = require('moment')
 
 ![1-1Q1121P24VM](../../.vuepress/public/node/1-1Q1121P24VM.ead8064d.jpg)
 
-### [#](https://heima-docs.vercel.app/node高级/#_8-2-mvc模式)8.2 MVC模式
+### 8.2 MVC模式
 
 上面说了设计模式是一种讨论，那在开发后端应用时，最常用的一个设计模式就叫MVC模式。
 
@@ -320,7 +320,7 @@ const monent = require('moment')
 
 **Controller(控制器) **是应用程序中处理用户交互的部分，通常控制器负责从视图读取数据，控制用户输入，并向模型发送数据。
 
-### [#](https://heima-docs.vercel.app/node高级/#_8-3-使用mvc模式改造项目)8.3 使用MVC模式改造项目
+### 8.3 使用MVC模式改造项目
 
 下面我会通过一个简单案例，演示把验证用户名功能拆分到不同模块，验证用户名原始代码如下
 

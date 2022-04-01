@@ -147,7 +147,8 @@
         title: 'Nginx',
         collapsable: true,
         children: [
-            'nginx/nginx'
+            'nginx/nginx',
+            'nginx/nginx入门'
         ]
     },
     {

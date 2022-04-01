@@ -1,3 +1,6 @@
 node_modules
 # vuepress temp file
 .temp
+/
+
+dist/

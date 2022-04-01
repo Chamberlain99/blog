@@ -129,20 +129,20 @@
             'os/thread'
         ]
     },
-    {
-        title: 'Python',
-        collapsable: true,
-        children: [
-            'python/python爬虫'
-        ]
-    },
-    {
-        title: 'Java',
-        collapsable: true,
-        children: [
-            'java/java'
-        ]
-    },
+    // {
+    //     title: 'Python',
+    //     collapsable: true,
+    //     children: [
+    //         'python/python爬虫'
+    //     ]
+    // },
+    // {
+    //     title: 'Java',
+    //     collapsable: true,
+    //     children: [
+    //         'java/java'
+    //     ]
+    // },
     {
         title: 'Nginx',
         collapsable: true,

@@ -75,6 +75,7 @@
         title:'设计模式',
         collapsable: true,
         children: [
+            'design/设计模式笔记',
             'design/introduce',
             'design/singleton',
             'design/factory',

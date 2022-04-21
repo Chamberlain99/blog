@@ -9,9 +9,9 @@
         title: 'vue3学习总结',
         collapsable: true,
         children: [
-            'sourceCode/vue3',
-            'sourceCode/vueAll',
-            'sourceCode/vueBase'
+            'sourceCode/vue简介',
+            'sourceCode/vue3使用小结1',
+            'sourceCode/vue3使用小结2'
         ]
     },
     {  
@@ -127,6 +127,14 @@
             'linux/linux_deploy',
             'linux/linux_centos',
             'linux/BasicCommand',
+            // 'linux/linux免密登陆',
+        ]
+    },
+    {
+        title: '开发工具篇',
+        collapsable: true,
+        children: [
+            '开发工具篇/git',
             // 'linux/linux免密登陆',
         ]
     },

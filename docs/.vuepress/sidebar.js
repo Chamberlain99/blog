@@ -92,6 +92,13 @@
         ]
     },
     {
+        title: 'JavaScript',
+        collapsable: true,
+        children: [
+            'javaScript/学习笔记',
+        ]
+    },
+    {
         title: 'Node',
         collapsable: true,
         children: [

@@ -124,6 +124,14 @@
         ]
     },
     {
+        title: '开发工具篇',
+        collapsable: true,
+        children: [
+            '开发工具篇/git',
+            // 'linux/linux免密登陆',
+        ]
+    },
+    {
         title: 'OS',
         collapsable: true,
         children: [

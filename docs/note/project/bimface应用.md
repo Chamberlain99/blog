@@ -1,3 +1,13 @@
+---
+title: bimface应用
+date: 2022-04-18 15:43:58
+permalink: /pages/cf8a65/
+categories:
+  - note
+  - project
+tags:
+  - 
+---
 # bimface小结
 
 ## bimface Api 服务API接口

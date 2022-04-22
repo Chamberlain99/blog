@@ -9,7 +9,7 @@
         title: 'vue3学习总结',
         collapsable: true,
         children: [
-            'sourceCode/vue简介',
+            'sourceCode/vue3简介',
             'sourceCode/vue3使用小结1',
             'sourceCode/vue3使用小结2'
         ]

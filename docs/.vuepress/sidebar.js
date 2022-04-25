@@ -89,7 +89,7 @@
             'typescript/typescript',
             'typescript/recursive_optimization',
             'typescript/functional_programming.md',
-            'javascript/'
+            'javascript/学习笔记'
         ]
     },
     // {

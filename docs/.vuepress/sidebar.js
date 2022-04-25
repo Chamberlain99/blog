@@ -83,12 +83,13 @@
         ]
     },
     {
-        title: 'TypeScript',
+        title: 'TS & JS进阶',
         collapsable: true,
         children: [
             'typescript/typescript',
             'typescript/recursive_optimization',
-            'typescript/functional_programming.md'
+            'typescript/functional_programming.md',
+            'javascript/'
         ]
     },
     {

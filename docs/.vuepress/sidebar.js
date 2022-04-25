@@ -9,7 +9,7 @@
         title: 'vue3学习总结',
         collapsable: true,
         children: [
-            'sourceCode/vue简介',
+            'sourceCode/vue3简介',
             'sourceCode/vue3使用小结1',
             'sourceCode/vue3使用小结2'
         ]
@@ -92,13 +92,13 @@
             'javascript/'
         ]
     },
-    {
-        title: 'JavaScript',
-        collapsable: true,
-        children: [
-            'javaScript/学习笔记',
-        ]
-    },
+    // {
+    //     title: 'JavaScript',
+    //     collapsable: true,
+    //     children: [
+    //         'javaScript/学习笔记',
+    //     ]
+    // },
     {
         title: 'Node',
         collapsable: true,

@@ -1,7 +1,7 @@
 ---
 title: javscript高级程序设计
-date: 2022-04-13 23:17:49
-permalink: /pages/45f03d/
+date: 2022-04-22 15:28:54
+permalink: /pages/3667a8/
 categories:
   - note
   - problem

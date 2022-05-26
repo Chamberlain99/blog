@@ -240,9 +240,10 @@ Viewer3D中多个接口提供了按条件筛选构件的功能，以便于对构
 
     ​		后续调用bimface提供的API接口时、需要携带view Token
 
-    
-    
-    <div style="width:10px;height:10px;background-color:#dd001b" ></div>
+
+![image-20220525163120270](bimface应用.assets/image-20220525163120270.png)
+
+
 
 ## bimface系统架构
 

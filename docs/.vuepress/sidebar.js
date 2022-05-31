@@ -192,6 +192,13 @@
         ]
     },
     {
+        title: '环境搭建、项目部署',
+        collapsable: true,
+        children: [
+            '环境搭建、项目部署/利用Xshell更新前端项目'
+        ]
+    },
+    {
         title: '常用工具',
         collapsable: true,
         children: [

@@ -1,3 +1,13 @@
+---
+title: 利用Xshell更新前端项目
+date: 2022-05-28 15:02:35
+permalink: /pages/b15df1/
+categories:
+  - note
+  - 环境搭建、项目部署
+tags:
+  - 
+---
 # 利用Xshell更新前端项目
 
 用户xxxx  密码xxx

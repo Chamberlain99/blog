@@ -139,6 +139,14 @@
             // 'linux/linux免密登陆',
         ]
     },
+	 {
+        title: '收藏夹',
+        collapsable: true,
+        children: [
+            'nav/nav',
+            // 'linux/linux免密登陆',
+        ]
+    },
     {
         title: 'OS',
         collapsable: true,

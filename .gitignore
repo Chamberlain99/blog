@@ -3,6 +3,6 @@ node_modules
 .temp
 /
 
-# dist/
-# docs/.vuepress/dist/
+dist/
+docs/.vuepress/dist/
 

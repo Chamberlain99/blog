@@ -25,6 +25,10 @@
     // const node = { text: 'node', link: '/node/nodeBase.md' }
     const contact = { text:'关于我',link:'/contact/' }
 
+    // const conllection = {
+    //     text:'收藏',
+    //     link:'/conllection/'
+    // }
 
 module.exports = [
     // home,
@@ -32,5 +36,6 @@ module.exports = [
     more,
     componentLib, //组件库
     // node,
-    contact
+    contact,
+    // conllection
 ]

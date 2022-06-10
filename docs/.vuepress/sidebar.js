@@ -203,7 +203,8 @@
         title: '环境搭建、项目部署',
         collapsable: true,
         children: [
-            '环境搭建、项目部署/利用Xshell更新前端项目'
+            '环境搭建、项目部署/利用Xshell更新前端项目',
+            '环境搭建、项目部署/gitlab-CICD自动化部署'
         ]
     },
     {
@@ -265,10 +266,20 @@
     },
   ]
   
+  const conllection = [
+    {  
+        title: '网站',
+        collapsable: true,
+        children: [
+            'conllection/01.网站.md',
+        ]
+    },
+  ]
 
 
   module.exports = {
     '/note/':note,
+    // '/conllection/':conllection,
 
     // '/vue/': vuePost,
     // '/vuesource/': vuesource,

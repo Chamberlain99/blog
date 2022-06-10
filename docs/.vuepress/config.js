@@ -25,7 +25,13 @@ module.exports = {
         editLinks: true,
         editLinkText: '在 Github 上编辑此页',
         lastUpdated: '更新时间',
-
+        // vssueConfig: {
+        //   platform: 'github',
+        //   owner: 'Chamberlain99',
+        //   repo: 'vue-press-blog-system',
+        //   clientId: 'f3885593c58b486b414b',
+        //   clientSecret: 'f854e5b4f2a93b80c947e3b79257a77aab2c33dd',
+        // }
     },
     markdown: {
       lineNumbers: true,

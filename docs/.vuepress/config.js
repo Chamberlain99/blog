@@ -3,7 +3,7 @@ const sidebar = require('./sidebar.js')
 const nav = require('./nav.js')
 /*   vding vuepress博客主题插件文档地址：https://doc.xugaoyi.com/  */
 module.exports = {
-    title: '程序员成长-修炼中心 「作者：陈楚城」',
+    title: '程序员成长-修炼中心 「作者：张伯伦」',
     description: '个人博客-学习总结',
     theme:'vdoing',     
     base:'/blog/', //https://<USERNAME>.github.io/
@@ -80,27 +80,9 @@ module.exports = {
           md.use(require("markdown-it-disable-url-encode"));
         }
      },
-    plugins: [
+    plugins:[
       ["@vuepress/medium-zoom",true],
        ["@vuepress/back-to-top",true],
-       [
-        'one-click-copy', // 代码块复制按钮
-        {
-          copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
-          copyMessage: '复制成功', // default is 'Copy successfully and then paste it for use.'
-          duration: 1000, // prompt message display time.
-          showInMobile: false, // whether to display on the mobile side, default: false.
-        },
-      ],
-      [
-        'vuepress-plugin-zooming', // 放大图片
-        {
-          selector: '.theme-vdoing-content img:not(.no-zoom)', // 排除class是no-zoom的图片
-          options: {
-            bgColor: 'rgba(0,0,0,0.6)',
-          },
-        },
-      ],
      ]
   }
   

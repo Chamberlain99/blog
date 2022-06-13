@@ -6,6 +6,11 @@ module.exports = {
     title: '程序员成长-修炼中心 「作者：张伯伦」',
     description: '个人博客-学习总结',
     theme:'vdoing',     
+    locales: {
+        '/': {
+          lang: 'zh-CN'
+        }
+    },
     base:'/blog/', //https://<USERNAME>.github.io/
     head:[
       ['link', { rel: 'icon', href: '/favicon.ico' }], // 增加一个自定义的 favicon(网页标签的图标) 

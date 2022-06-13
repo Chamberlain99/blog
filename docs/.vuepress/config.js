@@ -3,7 +3,7 @@ const sidebar = require('./sidebar.js')
 const nav = require('./nav.js')
 /*   vding vuepress博客主题插件文档地址：https://doc.xugaoyi.com/  */
 module.exports = {
-    title: '程序员成长-修炼中心 「作者：陈楚城个人博客」',
+    title: '程序员成长-修炼中心 「作者：陈楚城同学」',
     description: '个人博客-学习总结',
     theme:'vdoing',     
     locales: {
@@ -11,7 +11,7 @@ module.exports = {
           lang: 'zh-CN'
         }
     },
-    base:'/', //https://<USERNAME>.github.io/
+    base:'/blog/', //https://<USERNAME>.github.io/
     head:[
       ['link', { rel: 'icon', href: '/favicon.ico' }], // 增加一个自定义的 favicon(网页标签的图标) 
     ],

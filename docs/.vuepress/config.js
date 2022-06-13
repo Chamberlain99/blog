@@ -32,8 +32,8 @@ module.exports = {
         lastUpdated: '更新时间',
         author: {
           name: 'chamberlain', // 必需
-          link: 'https://github.com/Chamberlain99', // 可选的
-          
+          link: 'https://github.com/Chamberlain99', // 可选的323
+
         },
     
         // 博主信息 (显示在首页侧边栏)

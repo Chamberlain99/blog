@@ -16,8 +16,8 @@
     "@vuepress/plugin-medium-zoom": "^1.5.4",
     "vuepress": "^1.9.7",
     "vuepress-theme-reco": "^1.6.11",
-    // "vuepress-plugin-zooming": "^1.1.7",
-    // "vuepress-plugin-one-click-copy": "^1.0.2",
+    "vuepress-plugin-zooming": "^1.1.7",
+    "vuepress-plugin-one-click-copy": "^1.0.2",
     "vuepress-theme-vdoing": "^1.9.5"
   },
   "dependencies": {

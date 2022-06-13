@@ -33,6 +33,7 @@ module.exports = {
         author: {
           name: 'chamberlain', // 必需
           link: 'https://github.com/Chamberlain99', // 可选的
+          
         },
     
         // 博主信息 (显示在首页侧边栏)

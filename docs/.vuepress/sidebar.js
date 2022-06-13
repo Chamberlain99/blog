@@ -266,15 +266,15 @@
     },
   ]
   
-  const conllection = [
-    {  
-        title: '网站',
-        collapsable: true,
-        children: [
-            'conllection/01.网站.md',
-        ]
-    },
-  ]
+//   const conllection = [
+//     {  
+//         title: '网站',
+//         collapsable: true,
+//         children: [
+//             ' /pages/160bed/',
+//         ]
+//     },
+//   ]
 
 
   module.exports = {

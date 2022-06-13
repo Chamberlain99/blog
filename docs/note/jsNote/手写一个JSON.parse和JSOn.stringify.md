@@ -1,3 +1,13 @@
+---
+title: parse和JSOn.stringify
+date: 2022-03-16 20:00:07
+permalink: /pages/2eda7d/
+categories:
+  - note
+  - jsNote
+tags:
+  - 
+---
 #  手写一个JSON.parse和JSOn.stringify
 ```javascript
 // JSON.stringify(value[, replacer [, space]])：

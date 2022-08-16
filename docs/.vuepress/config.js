@@ -3,7 +3,7 @@ const sidebar = require('./sidebar.js')
 const nav = require('./nav.js')
 /*   vding vuepress博客主题插件文档地址：https://doc.xugaoyi.com/  */
 module.exports = {
-    title: '程序员成长-修炼中心 「作者：陈楚城」',
+    title: '程序员成长-修炼中心 「作者：陈楚城1」',
     description: '个人博客-学习总结',
     theme:'vdoing',     
     locales: {

@@ -3,6 +3,8 @@
 #### 个人博客系统
 这是chamberlain的个人博客系统，主要用于记录前端、后端的一些学习内容和知识
 
+一键快速部署项目：sh + deploy.hs
+
 #### 软件架构
 vuepress + vdoing + vue
 
